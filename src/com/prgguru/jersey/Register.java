@@ -45,6 +45,7 @@ public class Register {
 				}
 			} catch(SQLException sqle){
 				System.out.println("RegisterUSer catch sqle");
+				System.out.println(sqle.getMessage());
 				//When Primary key violation occurs that means user is already registered
 				if(sqle.getErrorCode() == 1062){
 					result = 1;
